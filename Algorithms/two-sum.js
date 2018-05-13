@@ -4,7 +4,7 @@
  * @return {number[]}
  */
 var twoSum = function (nums, target) {
-  const indexMap = {}
+  const indexMap = {};
   for (let i = 0; i < nums.length; i++) {
     const diff = target - nums[i];
     if (indexMap[diff] !== undefined)

@@ -4,8 +4,8 @@
  */
 var maxIncreaseKeepingSkyline = function (grid) {
   let sum = 0;
-  let colMaxes = [];
-  let rowMaxes = [];
+  const colMaxes = [];
+  const rowMaxes = [];
   for (let i = 0; i < grid.length; i++) {
     if (!colMaxes[i]) colMaxes[i] = Math.max(...grid[i]);
     for (let j = 0; j < grid[i].length; j++) {
