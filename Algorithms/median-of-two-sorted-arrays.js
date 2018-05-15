@@ -28,13 +28,13 @@ var findMedianSortedArrays = function (nums1, nums2) {
       if (p1 + 1 >= nums1.length)
         return medianIndex === i + 2
           ? getMedian(isOdd, nums2[p2], nums2[p2 + 1])
-          : getMedian(isOdd, nums2[medianIndex - p1 - 2], nums2[medianIndex - p1 - 1])
+          : getMedian(isOdd, nums2[medianIndex - p1 - 2], nums2[medianIndex - p1 - 1]);
       p1++;
     } else {
       if (p2 + 1 >= nums2.length)
         return medianIndex === i + 2
           ? getMedian(isOdd, nums1[p1], nums1[p1 + 1])
-          : getMedian(isOdd, nums1[medianIndex - p2 - 2], nums1[medianIndex - p2 -1])
+          : getMedian(isOdd, nums1[medianIndex - p2 - 2], nums1[medianIndex - p2 - 1]);
       p2++;
     }
   }
@@ -45,7 +45,7 @@ var findMedianSortedArrays = function (nums1, nums2) {
     return getMedian(isOdd, nums1[p1], nums1[p1 + 1]);
 
   return getMedian(isOdd, nums1[p1], nums2[p2]);
-}
+};
 
 function getMedian(isOdd, num1, num2) {
   if (isOdd) {
