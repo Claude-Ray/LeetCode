@@ -1,4 +1,6 @@
 /**
+ * @desc The variable `duplicates` could be an array,
+ * because nums' elements only appear `once` or `twice`.
  * @param {number[]} nums
  * @return {number[]}
  */
