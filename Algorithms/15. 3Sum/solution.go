@@ -1,4 +1,4 @@
-package threeSum
+package three_sum
 
 import (
 	"sort"
