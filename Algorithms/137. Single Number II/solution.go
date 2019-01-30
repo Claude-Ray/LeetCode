@@ -1,14 +1,10 @@
 package problem137
 
 func singleNumber(nums []int) int {
-	res := 0
-	var i uint
-	for ; i < 64; i++ {
-		sum := 0
-		for j := 0; j < len(nums); j++ {
-			sum += nums[j] >> i & 1
-		}
-		res |= (sum % 3) << i
+	ones, twos := 0, 0
+	for _, n := range nums {
+		ones = (ones ^ n) & ^twos
+		twos = (twos ^ n) & ^ones
 	}
-	return res
+	return ones
 }
