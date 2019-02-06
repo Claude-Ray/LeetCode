@@ -6,8 +6,7 @@ import (
 )
 
 func Test_insertionSortList(t *testing.T) {
-
-	L1 := [][]int{
+	lists := [][]int{
 		{4, 2, 1, 3},
 		{-1, 5, 3, 4, 0},
 	}
@@ -16,7 +15,7 @@ func Test_insertionSortList(t *testing.T) {
 		{-1, 0, 3, 4, 5},
 	}
 	for i := 0; i < len(results); i++ {
-		ret := getListVal(insertionSortList(genList(L1[i])))
+		ret := getListVal(insertionSortList(genList(lists[i])))
 		if !reflect.DeepEqual(ret, results[i]) {
 			t.Error("Case", i, "error:", ret)
 		}
