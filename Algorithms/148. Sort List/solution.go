@@ -10,17 +10,14 @@ func sortList(head *ListNode) *ListNode {
 		return head
 	}
 	fast, slow := head, head
-	i := 0
-	for fast.Next != nil {
-		if i%2 == 1 {
-			slow = slow.Next
-		}
-		fast = fast.Next
-		i++
+	var slowPre *ListNode
+	for fast != nil && fast.Next != nil {
+		slowPre = slow
+		slow = slow.Next
+		fast = fast.Next.Next
 	}
-	second := slow.Next
-	slow.Next = nil
-	return merge(sortList(head), sortList(second))
+	slowPre.Next = nil
+	return merge(sortList(head), sortList(slow))
 }
 
 func merge(a *ListNode, b *ListNode) *ListNode {
