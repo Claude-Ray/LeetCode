@@ -1,3 +1,5 @@
+.DS_Store
+.ccls-cache
 .vscode
 .log
 node_modules

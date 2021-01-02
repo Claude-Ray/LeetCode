@@ -1,0 +1,24 @@
+{
+  "name": "leetcode",
+  "version": "0.0.1",
+  "description": "LeetCode solutions",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Claude-Ray/LeetCode.git"
+  },
+  "author": "claude-ray",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Claude-Ray/LeetCode/issues"
+  },
+  "homepage": "https://github.com/Claude-Ray/LeetCode#readme",
+  "devDependencies": {
+    "eslint": "^7.1.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1"
+  }
+}
