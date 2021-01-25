@@ -61,9 +61,7 @@ var deserialize = function (s) {
       cur = stack.pop();
     } else if (s[i] === ',') {
       const brother = new NestedInteger();
-      const parent = stack.pop();
-      parent.add(brother);
-      stack.push(parent);
+      stack[stack.length - 1].add(brother);
       cur = brother;
     } else {
       let int = s[i];
