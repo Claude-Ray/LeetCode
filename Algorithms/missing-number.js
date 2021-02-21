@@ -9,8 +9,5 @@ var missingNumber = function (nums) {
     sum += nums[i];
     max += i;
   }
-  console.log(max, sum)
   return max - sum;
 };
-
-console.log(missingNumber([3,0,1]))
