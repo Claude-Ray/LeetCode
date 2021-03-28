@@ -33,3 +33,4 @@ rules:
   arrow-spacing: [2, {before: true, after: true}]
   # disallow the use of console
   no-console: 2
+  comma-dangle: [2, only-multiline]
