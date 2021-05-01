@@ -6,7 +6,6 @@ var find132pattern = function (nums) {
   const mini = [nums[0]];
   for (let i = 1; i < nums.length; i++)
     mini[i] = Math.min(mini[i - 1], nums[i]);
-  console.log(mini);
   const stack = [];
   for (let i = nums.length - 1; i > 0; i--) {
     if (nums[i] > mini[i]) {
