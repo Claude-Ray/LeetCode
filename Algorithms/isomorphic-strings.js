@@ -17,5 +17,3 @@ var isIsomorphic = function (s, t) {
   }
   return true;
 };
-
-console.log(isIsomorphic('add', 'egg'));
