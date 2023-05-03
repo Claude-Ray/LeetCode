@@ -6,8 +6,8 @@ var sumOfBeauties = function (nums) {
   let sum = 0;
   const leftMax = [];
   const rightMin = [];
-  max = Number.MIN_SAFE_INTEGER;
-  min = Number.MAX_SAFE_INTEGER;
+  let max = Number.MIN_SAFE_INTEGER;
+  let min = Number.MAX_SAFE_INTEGER;
   for (let i = 1; i < nums.length - 1; i++) {
     leftMax[i] = max = Math.max(max, nums[i - 1]);
     rightMin[nums.length - i - 1] = min = Math.min(min, nums[nums.length - i]);
