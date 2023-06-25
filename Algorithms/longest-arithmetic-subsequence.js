@@ -54,9 +54,3 @@ var longestArithSeqLength2 = function (nums) {
   }
   return maxCount;
 };
-
-console.log(longestArithSeqLength([9, 4, 7, 2, 10]));
-console.log(longestArithSeqLength([3, 6, 9, 12]));
-console.log(longestArithSeqLength([3, 3, 3, 2]));
-console.log(longestArithSeqLength([20, 1, 15, 3, 10, 5, 8]));
-console.log(longestArithSeqLength([0, 8, 45, 88, 48, 68, 28, 55, 17, 24]));
