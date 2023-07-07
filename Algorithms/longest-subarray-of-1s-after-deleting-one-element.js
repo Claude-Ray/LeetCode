@@ -20,3 +20,24 @@ var longestSubarray = function (nums) {
   max = Math.max(max, len);
   return max === nums.length ? max - 1 : max;
 };
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var longestSubarray2 = function (nums) {
+  let max = 0;
+  let left = -1;
+  let right = -1;
+  for (let i = 0; i < nums.length; i++) {
+    while (nums[i]) i++;
+    if (right < 0) right = i;
+    else {
+      max = Math.max(max, i - left - 2);
+      left = right;
+      right = i;
+    }
+  }
+  max = Math.max(max, nums.length - left - 2);
+  return max;
+};
