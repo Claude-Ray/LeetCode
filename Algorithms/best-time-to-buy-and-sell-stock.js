@@ -15,3 +15,18 @@ var maxProfit = function (prices) {
   }
   return max;
 };
+
+/**
+ * @param {number[]} prices
+ * @return {number}
+ */
+var maxProfit2 = function (prices) {
+  if (!prices.length) return 0;
+  let hold = prices[0];
+  let profit = 0;
+  for (const p of prices) {
+    hold = Math.min(p, hold);
+    if (hold < p) profit = Math.max(profit, p - hold);
+  }
+  return profit;
+};

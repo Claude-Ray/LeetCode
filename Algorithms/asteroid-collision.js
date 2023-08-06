@@ -4,7 +4,7 @@
  */
 var asteroidCollision = function (asteroids) {
   const result = [];
-  for (let i = 1; i < asteroids.length; i++) {
+  for (let i = 0; i < asteroids.length; i++) {
     const m = result[result.length - 1];
     const n = asteroids[i];
     if (!result.length) {

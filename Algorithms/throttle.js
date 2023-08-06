@@ -27,3 +27,30 @@ var throttle = function (fn, t) {
  * throttled("log"); // logged immediately.
  * throttled("log"); // logged at t=100ms.
  */
+
+/**
+ * @param {Function} fn
+ * @param {number} t
+ * @return {Function}
+ */
+var throttle2 = function (fn, t) {
+  let lastArgs = null;
+  let timer = null;
+  function timeFn() {
+    if (lastArgs) {
+      fn(...lastArgs);
+      lastArgs = null;
+      timer = setTimeout(timeFn, t);
+    } else {
+      timer = null;
+    }
+  }
+  return (...args) => {
+    if (timer) {
+      lastArgs = args;
+    } else {
+      fn(...args);
+      timer = setTimeout(timeFn, t);
+    }
+  };
+};
